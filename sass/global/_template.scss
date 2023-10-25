@@ -1,0 +1,167 @@
+@use '../utils/' as u;
+@use '../utils/mixins' as *;
+
+//body proprieties
+body{
+    width: 100%;
+    margin: auto;
+    font-family: u.$font-Monserat;
+    background-color: var(--background);
+}
+
+header{
+    .empty-content{
+        width: 100%;
+        padding: 25px;
+        background-color: var(--yellow);
+    }
+    .header-items{
+        width: 90%;
+        padding: 15px;
+        @include display-flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        margin-top: -25px;
+        background-color: var(--deepgreen);
+
+        div{
+            @include display-flex;
+            align-items: center;
+            gap: 4px;
+
+            h4{
+                color: var(--white);
+                span{
+                    color: var(--yellow);
+                }
+            }
+            i{
+                padding: 10px;
+                color: var(--deepgreen);
+                border-radius: 50%;
+                background-color: var(--yellow);
+            } 
+        }
+        .menu{
+            display: none;
+            .menu-container{
+                position: absolute;
+                top: 95px;
+                right: 10px;
+                width: 60%;
+                height: 50vh;
+                margin: auto;
+                transition: 1s ease-in-out;
+                margin-right: 200%;
+                background-color: var(--deepgreen);
+                border-top-left-radius: 10px;
+                @include display-column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                ul{
+                    
+                    li{
+                        list-style: none;
+                        margin-bottom: 25px;
+                        color: var(--deepgreen);
+                        padding: 8px 12px;
+                        border: 1px solid var(--yellow);
+                        a{
+                            color: var(--white);
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/**********************************************/
+section{
+    display: grid;
+    grid-template-columns: 20% auto;
+    margin-top: 5px;
+}
+nav{
+    padding: 10px 20px;
+    margin-top: 5px;
+    border-top-right-radius: 15px;
+    background-color: var(--deepgreen);
+    
+        .dashboard{
+            margin-top: 10px;
+            padding: 10px 20px;
+            color: var(--deepgreen);
+            text-align: center;
+            font-weight: bolder;
+            background-color: var(--yellow);
+            a{
+                color: var(--deepgreen);
+                text-decoration: none;
+            }
+        }
+        .profile{
+            @extend .dashboard;
+            background: none;
+            border: 1px solid var(--yellow);
+            a{
+                color: var(--yellow);
+            }
+        }
+    
+}
+
+/*********************************************/
+footer{
+    .footer-content{
+        padding: 15px;
+        text-align: center;
+        color: var(--white);
+        margin-top: 8px;
+        font-weight: bolder;
+        background-color: var(--deepgreen);
+    }
+}
+
+/************************************************/
+    /***************MEDIA QUERY**************/
+/************************************************/
+@include u.breakpoint(laptop){
+    section{
+        display: grid;
+        grid-template-columns: auto;
+    }
+    nav{
+        display: none;
+    }
+    header{
+        .header-items{
+            .button{
+                display: none;
+            }
+            .menu{
+                display: initial;
+                .menu-icons .icon{
+                    display: block;
+                    cursor: pointer;
+                }
+                .menu-icons .exit{
+                    display: none;
+                    cursor: pointer;
+                }
+                .menu-mobile .icon{
+                    display: none;
+                }
+                .menu-mobile .exit{
+                    display: initial;
+                }
+                .menu-mobile{
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}

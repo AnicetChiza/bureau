@@ -1,0 +1,46 @@
+@use '../utils/' as u;
+@use '../utils/mixins' as *;
+
+.section{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section .formulaire{
+    width: 45%;
+    border-radius: 5px;
+    padding: 30px;
+    box-shadow: 0px 0px 3px 0px var(--black);
+    h3{
+        text-align: center;
+        color: var(--deepgreen);
+    }
+}
+
+.section .formulaire form div{
+    margin-top: 10px;
+    @include display-column;
+    input{
+        @include input-properties;
+    }
+}
+
+.section .formulaire form div button{
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: var(--deepgreen);
+    a{
+        color: var(--white);
+        text-decoration: none;
+        font-weight: bolder;
+        font-family: u.$font-Monserat;
+    }
+}
+.forgottenpassword{
+    color: var(--deepgreen);
+}

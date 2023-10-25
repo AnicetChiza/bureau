@@ -1,0 +1,25 @@
+@use '../utils/' as u;
+
+  @include u.breakpoint(tablet){
+    
+      .sub_menu{
+        .disconnect{
+          i{
+            display: inline;
+          }
+          .btn_1{
+            display: none;
+          }
+        } 
+      }
+    
+      section{
+        grid-template-columns: auto;
+        .right-bloc{
+          width: 100%;
+        }
+        .left-bloc{
+            display: none;
+        }
+      }
+  }

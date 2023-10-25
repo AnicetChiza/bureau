@@ -1,0 +1,22 @@
+@use '../utils/' as u;
+@use '../utils/mixins' as *;
+
+@include u.breakpoint(laptop){
+    .section .formulaire{
+        width: 60%;
+    }
+}
+@include u.breakpoint(tablet){
+    .section .formulaire{
+        width: 80%;
+    }
+}
+@include u.breakpoint(mobile){
+    .section{
+        padding: 20px;
+    }
+    .section .formulaire{
+        width: 100%;
+        padding: 20px;
+    }
+}

@@ -1,0 +1,74 @@
+@use '../utils/' as u;
+@use '../utils/mixins' as *;
+
+.right-bloc{
+    .profile{
+       .user{
+        display: flex;
+       } 
+       div{    
+            margin-top: 30px;
+            border-radius: 5px;
+            background-color: var(--yellow);
+            padding-bottom: 10px;
+        p img{
+            margin-top: -10px;
+            margin-left: 40px;
+            border: 1px solid var(--deepgreen);
+       }
+       }
+       .custom-file-input {
+        position: relative;
+        display: inline-block;
+      }
+      .text{
+        margin-left: -10px;
+        padding: 0px 3px 3px 3px;
+        background-color: var(--deepgreen);
+      }
+      .hidden {
+        display: none;
+      }
+      
+      label {
+        height: 10px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        color: var(--white);
+        border-radius: 5px;
+      }
+      
+      .icon {
+        margin-right: 8px;
+      }
+      
+      #fileInput {
+        display: none;
+      }
+      
+    }
+    .formulaire {
+        div{
+            margin-top: 10px;
+            input{
+            @include input-properties;
+           }
+           width: 80%;
+           display: grid;
+        }
+        aside .nom {
+            gap: 10px;
+            @include display-column;
+            -webkit-column-gap: 10px;
+            
+            select{
+                @extend input
+            }
+            div{
+                margin-top: 10px;
+                display: grid;
+            } 
+        }
+    }
+}
