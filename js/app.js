@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Pour notre menu
 
-const menu = document.querySelector('.menu-icons');
-const exit = document.querySelector('.menu-container');
+const menu = document.querySelector ('.menu-icons');
+const exit = document.querySelector ('.menu-container');
 
 menu.addEventListener('click', () =>{
     menu.classList.toggle('menu-mobile');
