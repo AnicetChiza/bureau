@@ -12,65 +12,68 @@ body{
 header{
     .empty-content{
         width: 100%;
-        padding: 25px;
+        padding: 30px;
         background-color: var(--yellow);
     }
-    .header-items{
+    .header-content{
         width: 90%;
         padding: 15px;
         @include display-flex;
-        justify-content: space-between;
         align-items: center;
-        margin: auto;
-        margin-top: -25px;
+        justify-content: space-between;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, -50%);
         background-color: var(--deepgreen);
-
-        div{
+        .logo{
+            gap: 8px;
             @include display-flex;
             align-items: center;
-            gap: 4px;
-
+            justify-content: none;
+            i{
+                padding: 10px;
+                border-radius: 50%;
+                color: var(--deepgreen);
+                background-color: var(--yellow);
+            }
             h4{
                 color: var(--white);
                 span{
                     color: var(--yellow);
                 }
             }
-            i{
-                padding: 10px;
-                color: var(--deepgreen);
-                border-radius: 50%;
-                background-color: var(--yellow);
-            } 
         }
         .menu{
             display: none;
+            .menu-icons{
+                color: var(--deepgreen);
+                padding: 8px 8px;
+                border-radius: 50%;
+                background-color: var(--yellow);
+            }
             .menu-container{
                 position: absolute;
-                top: 95px;
-                right: 10px;
-                width: 60%;
-                height: 50vh;
-                margin: auto;
-                transition: 1s ease-in-out;
-                margin-right: 200%;
+                top: 70px;
+                right: 1px;
+                width: 100%;
+                transition: 1s;
+                margin-top: -200%;
                 background-color: var(--deepgreen);
-                border-top-left-radius: 10px;
-                @include display-column;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
+                @include display-flex;
                 ul{
-                    
+                    width: 100%;
                     li{
                         list-style: none;
-                        margin-bottom: 25px;
                         color: var(--deepgreen);
-                        padding: 8px 12px;
-                        border: 1px solid var(--yellow);
+                        text-align: center;
+                        padding: 15px;
+                        border-bottom: 1px solid var(--yellow);
                         a{
                             color: var(--white);
                             text-decoration: none;
+                            &:hover{
+                                color: var(--yellow);
+                            }
                         }
                     }
                 }
@@ -78,7 +81,6 @@ header{
         }
     }
 }
-
 /**********************************************/
 section{
     display: grid;
@@ -138,8 +140,9 @@ footer{
         display: none;
     }
     header{
-        .header-items{
-            .button{
+        
+        .header-content{
+            .header-items{
                 display: none;
             }
             .menu{
@@ -159,7 +162,7 @@ footer{
                     display: initial;
                 }
                 .menu-mobile{
-                    margin-right: 0;
+                    margin-top: 0;
                 }
             }
         }

@@ -20,68 +20,76 @@ body {
 
 header .empty-content {
   width: 100%;
-  padding: 25px;
+  padding: 30px;
   background-color: var(--yellow);
 }
-header .header-items {
+header .header-content {
   width: 90%;
   padding: 15px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  margin: auto;
-  margin-top: -25px;
+  justify-content: space-between;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: var(--deepgreen);
 }
-header .header-items div {
+header .header-content .logo {
+  gap: 8px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 4px;
+  justify-content: none;
 }
-header .header-items div h4 {
+header .header-content .logo i {
+  padding: 10px;
+  border-radius: 50%;
+  color: var(--deepgreen);
+  background-color: var(--yellow);
+}
+header .header-content .logo h4 {
   color: var(--white);
 }
-header .header-items div h4 span {
+header .header-content .logo h4 span {
   color: var(--yellow);
 }
-header .header-items div i {
-  padding: 10px;
+header .header-content .menu {
+  display: none;
+}
+header .header-content .menu .menu-icons {
   color: var(--deepgreen);
+  padding: 8px 8px;
   border-radius: 50%;
   background-color: var(--yellow);
 }
-header .header-items .menu {
-  display: none;
-}
-header .header-items .menu .menu-container {
+header .header-content .menu .menu-container {
   position: absolute;
-  top: 95px;
-  right: 10px;
-  width: 60%;
-  height: 50vh;
-  margin: auto;
-  transition: 1s ease-in-out;
-  margin-right: 200%;
+  top: 70px;
+  right: 1px;
+  width: 100%;
+  transition: 1s;
+  margin-top: -200%;
   background-color: var(--deepgreen);
-  border-top-left-radius: 10px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  flex-direction: row;
 }
-header .header-items .menu .menu-container ul li {
+header .header-content .menu .menu-container ul {
+  width: 100%;
+}
+header .header-content .menu .menu-container ul li {
   list-style: none;
-  margin-bottom: 25px;
   color: var(--deepgreen);
-  padding: 8px 12px;
-  border: 1px solid var(--yellow);
+  text-align: center;
+  padding: 15px;
+  border-bottom: 1px solid var(--yellow);
 }
-header .header-items .menu .menu-container ul li a {
+header .header-content .menu .menu-container ul li a {
   color: var(--white);
   text-decoration: none;
+}
+header .header-content .menu .menu-container ul li a:hover {
+  color: var(--yellow);
 }
 
 /**********************************************/
@@ -138,28 +146,28 @@ footer .footer-content {
   nav {
     display: none;
   }
-  header .header-items .button {
+  header .header-content .header-items {
     display: none;
   }
-  header .header-items .menu {
+  header .header-content .menu {
     display: initial;
   }
-  header .header-items .menu .menu-icons .icon {
+  header .header-content .menu .menu-icons .icon {
     display: block;
     cursor: pointer;
   }
-  header .header-items .menu .menu-icons .exit {
+  header .header-content .menu .menu-icons .exit {
     display: none;
     cursor: pointer;
   }
-  header .header-items .menu .menu-mobile .icon {
+  header .header-content .menu .menu-mobile .icon {
     display: none;
   }
-  header .header-items .menu .menu-mobile .exit {
+  header .header-content .menu .menu-mobile .exit {
     display: initial;
   }
-  header .header-items .menu .menu-mobile {
-    margin-right: 0;
+  header .header-content .menu .menu-mobile {
+    margin-top: 0;
   }
 }
 *,
