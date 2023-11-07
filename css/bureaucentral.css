@@ -96,7 +96,7 @@ header .header-content .menu .menu-container ul li a:hover {
 section {
   display: grid;
   grid-template-columns: 20% auto;
-  margin-top: 5px;
+  margin-top: -30px;
 }
 
 nav {
@@ -461,6 +461,8 @@ button a {
 }
 
 .right-bloc {
+  height: 80vh;
+  overflow: auto;
   padding-top: 30px;
   padding-left: 5%;
   padding-right: 5%;
