@@ -449,11 +449,14 @@ button a {
   flex-direction: row;
   justify-content: space-between;
 }
+.right-bloc .new {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
 .right-bloc .new a {
-  padding: 5px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 10px 20px;
   border: none;
+  text-decoration: none;
   border-radius: 5px;
   color: var(--yellow);
   font-family: "Montserrat", sans-serif;
