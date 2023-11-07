@@ -22,20 +22,20 @@
           display: none;
       }
   
-    }   
-}
-
-    @include u.breakpoint(mobile){
+    }
+    @media screen and (max-width: 492px){
       .right-bloc{
         .table_scrolling_area{
           width: 100%;
-          height: 25vh;
           table{
             width: 130%;
           }
         }
       }
-    }
+    }   
+}
+
+    @include u.breakpoint(mobile){
     @media screen and (max-width:883px) {
       .right-bloc{
         .formulaire {
@@ -61,4 +61,4 @@
             }
         }
     }
- 
+}
