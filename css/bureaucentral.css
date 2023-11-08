@@ -41,6 +41,7 @@ header .header-content .logo {
   flex-direction: row;
   align-items: center;
   justify-content: none;
+  -webkit-column-gap: 8px;
 }
 header .header-content .logo i {
   padding: 10px;
@@ -195,7 +196,7 @@ button a {
 }
 
 .right-bloc .table_scrolling_area {
-  overflow: auto;
+  overflow-y: auto;
   margin-bottom: 5px;
 }
 .right-bloc table {
@@ -299,7 +300,6 @@ button a {
 @media (max-width: 480px) {
   section .right-bloc .table_scrolling_area {
     width: 100%;
-    height: 62vh;
   }
   section .right-bloc .table_scrolling_area table {
     width: 160%;
@@ -354,7 +354,7 @@ button a {
     width: 100%;
   }
   .right-bloc .table_scrolling_area table {
-    width: 130%;
+    width: 250%;
   }
 }
 @media screen and (max-width: 480px) and (max-width: 883px) {
@@ -464,7 +464,7 @@ button a {
 
 .right-bloc {
   height: 85vh;
-  overflow: auto;
+  overflow-x: auto;
   padding-top: 30px;
   padding-left: 5%;
   padding-right: 5%;

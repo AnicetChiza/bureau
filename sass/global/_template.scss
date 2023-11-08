@@ -30,6 +30,7 @@ header{
             @include display-flex;
             align-items: center;
             justify-content: none;
+            -webkit-column-gap: 8px;
             i{
                 padding: 10px;
                 border-radius: 50%;
